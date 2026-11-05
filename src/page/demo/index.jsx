@@ -3,6 +3,7 @@ import { Button, Divider } from 'antd'
 
 const demoIndex = [
   { title: '百度地图搜索/定位', path: 'baiduMap-search-locate' },
+  { title: '水滴', path: 'water' },
 ]
 
 function DemoIndex() {

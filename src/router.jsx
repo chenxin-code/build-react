@@ -1,6 +1,7 @@
 import { Navigate } from 'react-router-dom'
 import DemoIndex from './page/demo/index'
 import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
+import Water from './page/demo/Water'
 
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
       {
         path: 'baiduMap-search-locate',
         element: <BaiduMapSearchLocate />,
+      },
+      {
+        path: 'water',
+        element: <Water />,
       },
     ],
   },
