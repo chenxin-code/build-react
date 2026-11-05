@@ -1,8 +1,0 @@
-.tab-row {
-  overflow-x: auto;
-}
-
-.tab-row .ant-btn-group {
-  flex-wrap: nowrap;
-  display: inline-flex;
-}

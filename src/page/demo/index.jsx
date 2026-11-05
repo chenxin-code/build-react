@@ -12,8 +12,8 @@ function DemoIndex() {
   return (
     <div>
       <Divider>DEMO</Divider>
-      <div className="tab-row">
-        <Button.Group>
+      <div style={{ overflowX: 'auto' }}>
+        <Button.Group style={{ flexWrap: 'nowrap', display: 'inline-flex' }}>
           {demoIndex.map((item) => {
             const isActive = location.pathname === `/demo/${item.path}`
             return (
