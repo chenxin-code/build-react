@@ -1,11 +1,11 @@
-import { useRoutes } from 'react-router-dom'
+import { useRoutes, Navigate } from 'react-router-dom'
 import DemoIndex from './page/demo/index'
 import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
 
 const routes = [
   {
     path: '/',
-    element: <DemoIndex />,
+    element: <Navigate to="/demo" replace />,
   },
   {
     path: '/demo',
