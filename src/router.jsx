@@ -2,6 +2,7 @@ import { Navigate } from 'react-router-dom'
 import DemoIndex from './page/demo/index'
 import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
 import Water from './page/demo/Water'
+import BatchCreatePlan from './page/demo/BatchCreatePlan'
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
       {
         path: 'water',
         element: <Water />,
+      },
+      {
+        path: 'batch-create-plan',
+        element: <BatchCreatePlan />,
       },
     ],
   },
