@@ -1,5 +1,5 @@
 import { Outlet, useNavigate, useLocation } from 'react-router-dom'
-import { Button, Divider, Space } from 'antd'
+import { Button, Divider } from 'antd'
 
 const demoIndex = [
   { title: '百度地图搜索/定位', path: 'baiduMap-search-locate' },
@@ -13,7 +13,7 @@ function DemoIndex() {
     <div>
       <Divider>DEMO</Divider>
       <div className="tab-row">
-        <Space>
+        <Button.Group>
           {demoIndex.map((item) => {
             const isActive = location.pathname === `/demo/${item.path}`
             return (
@@ -28,7 +28,7 @@ function DemoIndex() {
               </Button>
             )
           })}
-        </Space>
+        </Button.Group>
       </div>
       <Outlet />
     </div>
