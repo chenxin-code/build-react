@@ -1,9 +1,8 @@
 import { useRoutes } from 'react-router-dom'
-import type { RouteObject } from 'react-router-dom'
 import DemoIndex from './page/demo/index'
 import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
 
-const routes: RouteObject[] = [
+const routes = [
   {
     path: '/',
     element: <DemoIndex />,

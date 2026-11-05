@@ -4,25 +4,21 @@ import { EnvironmentOutlined } from '@ant-design/icons'
 import baiduMap from '../../api/baiduMap'
 import BaiduMapDialog from '../../component/BaiduMap'
 
-interface SuggestionItem {
-  value: string
-}
-
 function BaiduMapSearchLocate() {
   const [address, setAddress] = useState('')
-  const [options, setOptions] = useState<SuggestionItem[]>([])
+  const [options, setOptions] = useState([])
   const [showMap, setShowMap] = useState(false)
-  const mapRef = useRef<{ initMap: (addr: string) => void }>(null)
+  const mapRef = useRef(null)
 
-  const fetchSuggestions = useCallback((queryString: string) => {
+  const fetchSuggestions = useCallback((queryString) => {
     if (!queryString) {
       setOptions([])
       return
     }
     baiduMap
       .get('/su?cid=&type=0', { params: { wd: queryString } })
-      .then((resp: any) => {
-        const list: SuggestionItem[] = resp.s.map((item: string) => {
+      .then((resp) => {
+        const list = resp.s.map((item) => {
           const arr = item.split('$')
           return { value: arr[0] + arr[1] + arr[2] + arr[3] }
         })
@@ -30,7 +26,7 @@ function BaiduMapSearchLocate() {
       })
   }, [])
 
-  const handleSelect = useCallback((value: string) => {
+  const handleSelect = useCallback((value) => {
     setAddress(value)
   }, [])
 

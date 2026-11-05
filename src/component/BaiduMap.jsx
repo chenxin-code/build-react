@@ -7,18 +7,14 @@ import {
 } from 'react'
 import { Modal, message } from 'antd'
 
-interface BaiduMapDialogHandle {
-  initMap: (address: string) => void
-}
-
-const BaiduMapDialog = forwardRef<BaiduMapDialogHandle>((_props, ref) => {
+const BaiduMapDialog = forwardRef((props, ref) => {
   const [open, setOpen] = useState(false)
   const [title, setTitle] = useState('')
   const [coord, setCoord] = useState('')
-  const containerRef = useRef<HTMLDivElement>(null)
-  const mapInstanceRef = useRef<any>(null)
+  const containerRef = useRef(null)
+  const mapInstanceRef = useRef(null)
 
-  const initMap = useCallback((address: string) => {
+  const initMap = useCallback((address) => {
     setOpen(true)
     setTitle(address)
     setCoord('')
@@ -33,7 +29,7 @@ const BaiduMapDialog = forwardRef<BaiduMapDialogHandle>((_props, ref) => {
       const geocoder = new BMapGL.Geocoder()
       geocoder.getPoint(
         address,
-        (point: any) => {
+        (point) => {
           if (point) {
             setCoord(`${point.lng},${point.lat}`)
             map.centerAndZoom(point, 16)
