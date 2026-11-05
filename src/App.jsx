@@ -1,23 +1,5 @@
-import { useRoutes, Navigate } from 'react-router-dom'
-import DemoIndex from './page/demo/index'
-import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
-
-const routes = [
-  {
-    path: '/',
-    element: <Navigate to="/demo" replace />,
-  },
-  {
-    path: '/demo',
-    element: <DemoIndex />,
-    children: [
-      {
-        path: 'baiduMap-search-locate',
-        element: <BaiduMapSearchLocate />,
-      },
-    ],
-  },
-]
+import { useRoutes } from 'react-router-dom'
+import routes from './router'
 
 function App() {
   return useRoutes(routes)
