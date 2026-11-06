@@ -3,6 +3,7 @@ import DemoIndex from './page/demo/index'
 import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
 import Water from './page/demo/Water'
 import BatchCreatePlan from './page/demo/BatchCreatePlan'
+import Earth3D from './page/demo/Earth3D'
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
       {
         path: 'batch-create-plan',
         element: <BatchCreatePlan />,
+      },
+      {
+        path: '3d-earth',
+        element: <Earth3D />,
       },
     ],
   },

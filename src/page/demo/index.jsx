@@ -9,6 +9,7 @@ const demoIndexData = [
   { title: '百度地图搜索/定位', path: 'baiduMap-search-locate' },
   { title: '水滴', path: 'water' },
   { title: '批量创建计划', path: 'batch-create-plan' },
+  { title: '3D地球', path: '3d-earth' },
 ]
 
 function DemoIndex() {
