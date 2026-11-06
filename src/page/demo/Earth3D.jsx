@@ -26,6 +26,7 @@ function Earth3D() {
     const renderer = rendererRef.current
     const scene = sceneRef.current
     const camera = cameraRef.current
+    const controls = controlsRef.current
     const earthDom = earthRef.current
 
     if (!renderer || !scene || !camera || !earthDom) return
@@ -48,11 +49,18 @@ function Earth3D() {
         newCamera.position.set(0, 0, 200)
         newCamera.lookAt(0, 0, 0)
         cameraRef.current = newCamera
+        if (controls) {
+          controls.object = newCamera
+        }
       }
     }
 
     if (rotationRef.current) {
       scene.rotation.y += 0.003
+    }
+
+    if (controls) {
+      controls.update()
     }
 
     renderer.render(scene, cameraRef.current)
@@ -70,6 +78,7 @@ function Earth3D() {
     const renderer = new THREE.WebGLRenderer({ antialias: true })
     renderer.setSize(earthDom.clientWidth, earthDom.clientHeight)
     renderer.setClearColor(0x000, 0)
+    renderer.domElement.style.cursor = 'grab'
     earthDom.appendChild(renderer.domElement)
     rendererRef.current = renderer
 
@@ -122,7 +131,7 @@ function Earth3D() {
         </button>
       </div>
       <div style={{ width: '100%', height: '100%' }}>
-        <div ref={earthRef} style={{ width: '100%', height: '100%' }} />
+        <div ref={earthRef} style={{ width: '100%', height: '100%', cursor: 'grab' }} />
       </div>
     </div>
   )
