@@ -1,0 +1,40 @@
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.arrow-left,
+.arrow-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 36px;
+  cursor: pointer;
+  color: #606266;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  color: #409eff;
+}
+
+.tab-row {
+  overflow-x: auto;
+  max-width: 80%;
+  scrollbar-width: none;
+}
+
+.tab-row::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-row .ant-btn-group {
+  flex-wrap: nowrap;
+  display: inline-flex;
+}
