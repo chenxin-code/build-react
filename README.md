@@ -2,6 +2,10 @@
 
 React 18 + JavaScript + Vite 项目，从 build-vue2 / build-vue3 迁移的 Demo 页面集合。
 
+## 在线演示
+
+访问 https://chenxin-code.github.io/build-react/
+
 ## 技术栈
 
 - React 18
