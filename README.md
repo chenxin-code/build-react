@@ -47,3 +47,18 @@ src/
 ├── App.jsx           # 应用入口
 └── main.jsx          # 挂载入口
 ```
+
+## 自动部署
+
+本项目已配置 GitHub Actions 自动部署到 GitHub Pages：
+
+- **触发条件**: 推送代码到 `master` 分支
+- **部署流程**: 自动构建 → 发布到 `gh-pages` 分支 → GitHub Pages 读取
+- **访问地址**: https://chenxin-code.github.io/build-react/
+
+### 部署配置
+
+- `.github/workflows/deploy.yml` - GitHub Actions 工作流配置
+- `vite.config.js` - `base` 根据环境动态设置：
+  - 开发环境: `/`
+  - 生产环境: `/build-react/`

@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
-  base: '/build-react/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/build-react/' : '/',
   plugins: [react()],
   server: {
     port: 333,
@@ -14,4 +14,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
