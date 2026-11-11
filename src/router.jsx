@@ -4,11 +4,16 @@ import BaiduMapSearchLocate from './page/demo/BaiduMapSearchLocate'
 import Water from './page/demo/Water'
 import BatchCreatePlan from './page/demo/BatchCreatePlan'
 import Earth3D from './page/demo/Earth3D'
+import NotFound from './page/NotFound'
 
 const routes = [
   {
     path: '/',
     element: <Navigate to="/demo" replace />,
+  },
+  {
+    path: '/404',
+    element: <NotFound />,
   },
   {
     path: '/demo',
@@ -31,6 +36,10 @@ const routes = [
         element: <Earth3D />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <Navigate to="/404" replace />,
   },
 ]
 
