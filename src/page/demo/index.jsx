@@ -10,6 +10,7 @@ const demoIndexData = [
   { title: '水滴', path: 'water' },
   { title: '批量创建计划', path: 'batch-create-plan' },
   { title: '3D地球', path: '3d-earth' },
+  { title: '分组排序', path: 'group-order' },
 ]
 
 function DemoIndex() {

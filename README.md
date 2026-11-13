@@ -34,6 +34,7 @@ npm run dev
 | 水滴 | `/demo/water` | CSS 动画水滴效果 |
 | 批量创建计划 | `/demo/batch-create-plan` | 产品计划批量生成 |
 | 3D地球 | `/demo/3d-earth` | Three.js 3D 地球，支持拖拽/缩放/自转 |
+| 分组排序 | `/demo/group-order` | 数据分组与升/降序排序 |
 
 ## 项目结构
 

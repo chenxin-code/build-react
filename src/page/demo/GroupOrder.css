@@ -1,0 +1,25 @@
+.group-order {
+  margin: 30px 0;
+}
+
+.group-order-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.group-order-tag {
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.group-order-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
