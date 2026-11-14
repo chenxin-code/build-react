@@ -5,6 +5,7 @@ import Water from './page/demo/Water'
 import BatchCreatePlan from './page/demo/BatchCreatePlan'
 import Earth3D from './page/demo/Earth3D'
 import GroupOrder from './page/demo/GroupOrder'
+import TestApi from './page/demo/TestApi'
 import NotFound from './page/NotFound'
 
 const routes = [
@@ -39,6 +40,10 @@ const routes = [
       {
         path: 'group-order',
         element: <GroupOrder />,
+      },
+      {
+        path: 'test-api',
+        element: <TestApi />,
       },
     ],
   },

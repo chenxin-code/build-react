@@ -12,6 +12,16 @@ export default defineConfig(({ command }) => ({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/baiduMap/, ''),
       },
+      '/baiduNews': {
+        target: 'https://news.baidu.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/baiduNews/, ''),
+      },
+      '/taobaoSearchSuggest': {
+        target: 'https://suggest.taobao.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/taobaoSearchSuggest/, ''),
+      },
     },
   },
 }))
