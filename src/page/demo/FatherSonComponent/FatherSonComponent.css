@@ -1,0 +1,33 @@
+.father-son,
+.father-son-mid,
+.father-son-leaf {
+  padding: 20px;
+}
+
+.father-son {
+  background-color: lightgreen;
+}
+
+.father-son-mid {
+  background-color: mediumseagreen;
+}
+
+.father-son-leaf {
+  background-color: forestgreen;
+}
+
+.father-son-num {
+  color: red;
+}
+
+.father-son-key {
+  color: blue;
+}
+
+.father-son-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 20px;
+}
