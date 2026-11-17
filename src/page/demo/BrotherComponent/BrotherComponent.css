@@ -1,0 +1,13 @@
+.brother-row {
+  display: flex;
+}
+
+.brother-redux-box,
+.brother-bus-box {
+  margin: 5px;
+  border: 1px solid dodgerblue;
+}
+
+.brother-bus-box {
+  border-color: orangered;
+}

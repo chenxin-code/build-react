@@ -13,6 +13,7 @@ const demoIndexData = [
   { title: '分组排序', path: 'group-order' },
   { title: '第三方接口测试', path: 'test-api' },
   { title: '父子组件通信', path: 'father-son-component' },
+  { title: '兄弟组件通信', path: 'brother-component' },
 ]
 
 function DemoIndex() {

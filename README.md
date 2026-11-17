@@ -13,6 +13,8 @@ React 18 + JavaScript + Vite 项目，从 build-vue2 / build-vue3 迁移的 Demo
 - Vite 6
 - React Router 6
 - Ant Design 5
+- Redux Toolkit
+- Mitt
 - Axios
 - Three.js
 - Lodash
@@ -37,6 +39,7 @@ npm run dev
 | 分组排序 | `/demo/group-order` | 数据分组与升/降序排序 |
 | 第三方接口测试 | `/demo/test-api` | 百度新闻 / 淘宝搜索提示接口调用与结果展示 |
 | 父子组件通信 | `/demo/father-son-component` | props / 回调 / context / ref 四种组件通信方式 |
+| 兄弟组件通信 | `/demo/brother-component` | Redux 与 eventBus 两种兄弟组件通信方式 |
 
 ## 路由说明
 

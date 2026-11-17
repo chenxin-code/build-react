@@ -7,6 +7,7 @@ import Earth3D from './page/demo/Earth3D'
 import GroupOrder from './page/demo/GroupOrder'
 import TestApi from './page/demo/TestApi'
 import FatherSonComponent from './page/demo/FatherSonComponent'
+import BrotherComponent from './page/demo/BrotherComponent'
 import NotFound from './page/NotFound'
 
 const routes = [
@@ -49,6 +50,10 @@ const routes = [
       {
         path: 'father-son-component',
         element: <FatherSonComponent />,
+      },
+      {
+        path: 'brother-component',
+        element: <BrotherComponent />,
       },
     ],
   },
