@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: '20'
 
+      # npm ci 严格按 package-lock.json 安装，保证 CI 和本地装到同一批版本
+      # npm install 会按 package.json 的 ^ 范围重新解析，可能装到新版本
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
